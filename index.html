@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>CMDABCPrimer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="asset/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quiple/hbios-sys@latest/hbios-sys.css">
+  </head>
+  <body>
+    
+    <div id="dos-content" class="dos"></div>
+
+   
+
+    <div id="log-container"></div>
+    
+    <div id="description-a" style="display: none;">
+        A for Audio<br>Radiohead - No Surprises<br>Audio 태그를 이용해 음악이나 사운드를 삽입할 수 있습니다.
+    </div>
+    
+    <div id="description-b" style="display:none;">
+      <button class="cmd-button" type="button" onclick="alert('아무것도 없답니다 ㅎㅎ'); this.blur();">B</button>
+  <br>
+      Button 태그를 이용해 버튼을 구현합니다. 눌러보세요!
+    </div>
+
+    <div id="description-c" style="display: none;">
+      <p>'C'anvas 기능을 이용합니다.</p>
+      <p>이 태그는 비트맵 그래픽이나 애니메이션, 아스키아트 같은 시각적 콘텐츠를 렌더링할 수 있는 강력한 도구입니다.</p>
+      <video id="video" style="display: none;"></video> <!-- 비디오 요소 추가 -->
+      <pre id="ascii-art"></pre> <!-- 아스키 아트를 렌더링할 요소 -->
+    </div>
+    
+
+  <div id="description-d" style="display: none;">
+    'D'ark/light Mode를 키고 끌 수 있습니다.
+
+    다크/라이트 모드가 활성화되었습니다!
+  </div>
+
+  <div id="description-e" style="display: none;">
+    <div class="multi-ellipsis">'E'llipsis 기능을 이용해 말줄임표를 구현할 수 있습니다.
+      [Web발신]
+너는나를존중해야한다나는발롱도르5개와수많은개인트로피를들어올렸으며2016유로에서포르투갈을이끌고우승을차지했고동시에A매치역대최다득점자이다또한챔스역대최다득점자이자5번이나우승을차지한레알마드리드의상징이다또한36세의나이에도프리미어리그에서18골을기록하고챔스에서5경기연속골을기록하며내가세계최고임을증명해냈다은혜를모르는맨유보드진과팬들은내가맨유의골칫덩이라며쫓아냈지만내가세계최고이고내가팀보다위대하다는사실은바뀌지않는다내가사우디에간이유는메시에대한자격지심이아니라유럽에서이룰수있는모든것을이루었기에아시아를정복하기위해간것이지단지돈을위해서간것이아니다</div>
+  </div>
+
+  <div id="description-f" style="display: none;">
+    'F'ull Screen Mode
+    전체화면 모드가 활성화/비활성화됩니다.
+  </div>
+
+    
+    <div id="description-g" style="display: none;">
+        Geolocation 기능을 이용해 현재 위치를 불러올 수 있습니다.
+        <div id="location-info">
+            <span id="message">위치 정보를 불러오는 중...</span>
+        </div>
+    </div>
+
+    
+    
+    <div id="description-h" style="display: none;">
+      'H'ead의 역할을 합니다. h1, h2, h3 ... (야구만화 H2 아님ㅋㅋ)
+      <h1>h1제목</h1>
+      <h2>h2제목</h2>
+      <h3>h3제목</h3>
+      <h4>h4제목</h4>
+      <h5>h5제목</h5>
+      <h6>h6제목</h6>
+    </div>
+
+    <div id="description-i" style="display: none;">
+      'I'nput 태그를 Javascript 안에 삽입해 글자 입력을 받고 처리할 수 있습니다.
+      아셨나요? 지금 모든 과정은 Input을 거치고 있다는 사실을 ..
+    </div>
+
+    <div id="description-j" style="display: none;">
+      'J'avascript는 신이고 무적이다.
+      24년 10월 24일 11시 59분 기준 index.html의 길이는 87줄이지만 JS는 700줄에 달한답니다. ㅎㅎ^^
+      이 모든 코드는 Javascript 아래에서..
+    </div>
+
+    <div id="description-k" class="sprite-animation" style="display: none;">
+      
+  </div>
+  
+  <div id="description-l" style="display: none;">
+    'L'ist를 보여주는 li 태그를 활용해볼 수 있습니다.
+    <ul class="cmd-list">
+      <li>Initializing system...</li>
+      <li>Loading modules...</li>
+      <li>Checking configuration...</li>
+      <li><span class="success">[OK]</span> Environment set.</li>
+      <li><span class="warning">[WARNING]</span> Disk space low.</li>
+      <li><span class="error">[ERROR]</span> Failed to connect to server.</li>
+    </ul>
+  </div>
+
+  <div id="description-m" style="display: none;">
+    @media queries 기능에 의해 화면의 너비가 줄어들면 최대 한계치를 알립니다.
+  </div>
+  
+  <nav id="description-n" style="display: none;">
+    <ul style="list-style: none; padding: 0;">
+      <li style="display: inline; margin-right: 10px;">[홈]</li>
+      <li style="display: inline; margin-right: 10px;">[프로필]</li>
+      <li style="display: inline; margin-right: 10px;">[이런식으로]</li>
+      <li style="display: inline; margin-right: 10px;">[네비바를]</li>
+      <li style="display: inline; margin-right: 10px;">[출력할수있지만]</li>
+      <li style="display: inline;">[기능은안넣었답니다ㅎㅎ;]</li>
+    </ul>
+  </nav>
+
+  <div id="description-o" style="display: none;">
+    <button class="cmd-button" type="button" onclick="alert('아무것도 없답니다 ㅎㅎ'); this.blur();">B</button>
+    
+    B에서 나왔던 버튼에도 onClick 함수가 적용되어 있습니다.
+  </div>
+
+  <div id="description-p" style="display: none;">
+    <pre>⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⣠⡶⠛⠉⠀⠀⠀⠀⠀⠀⠀⠈⠙⠻⢦⡀⠀⢀⣴⠞⠋⠉⠉⠉⠉⠙⠛⠶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⢀⡾⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣶⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⢠⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣀⠀⠸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠘⠀⠀⠀⠀⠀⠀⢀⣴⠖⠛⠋⠉⠉⠉⠉⠉⠉⠙⠛⠻⢦⣄⠀⠀⣀⣠⣤⣤⣤⣤⣤⣄⣀⠈⢷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⢠⡾⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢻⣏⠉⠀⠀⠀⠀⠀⠀⠈⠉⠙⠲⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠻⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣀⣀⣀⣀⣤⣄⣤⣤⣄⣀⣀⣤⣀⡈⢷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⡈⢻⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⢀⡴⠟⠉⣉⣉⣩⣭⣽⠥⠦⣤⣌⣉⠛⠿⢦⣄⠈⠛⢶⣗⠀⠀⠀⠀⠀⢰⣞⣻⣽⣽⣭⣭⣭⣽⣷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⢀⡴⢋⣠⠾⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⢦⣄⡙⢷⣄⠀⠹⣧⡀⠀⢀⡶⠟⣫⣭⢿⡿⠿⠿⠷⣦⡉⢻⣿⡄⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⢻⣧⣾⣁⣤⡤⠴⠶⠖⣶⣶⣶⣶⣶⣶⣶⣶⠒⠛⠛⠳⣿⢷⣤⢺⣇⠀⠉⣢⣿⣿⣿⣾⣶⣶⣦⣄⡀⠹⣾⡏⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠉⠙⡳⠶⣄⣼⣿⣷⢾⣿⡟⠋⠛⣿⡇⠀⠀⠀⠈⣷⠘⢷⡟⢀⡾⣿⣿⣩⣿⣿⠿⢿⣧⠈⠙⠳⢾⣇⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⡈⠻⢿⣿⣼⣿⣷⣦⣾⣿⠇⠀⠀⠀⠀⠘⣧⢸⢣⡟⠀⣿⣿⣟⣿⣿⣤⣾⡿⠀⢀⣴⢿⡟⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⣀⠀⠉⠉⠛⠿⠿⠿⢤⣤⣤⡴⠖⠛⢉⣿⠈⢹⡓⢿⠿⠿⠿⠿⠿⠿⠷⠞⠋⣡⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠛⠛⠛⠳⠶⠤⠴⠶⢤⣴⠾⠋⠁⠀⠈⠛⠶⣤⡤⠤⠴⠆⢀⡾⢷⣾⢯⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⣴⡶⠶⠖⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠈⢳⣄⠀⠀⠛⠛⠛⠁⠀⢻⣆⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⣀⣠⣴⡶⠾⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⠶⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⢧⠀⠀⠀⠀⠀⠀⠀⣿⣦⠀⠀⠀⠀⠀⠀⠀
+      ⠀⣼⢏⣿⠛⠿⠶⢤⣄⣀⡀⠀⠀⠀⠀⠐⠻⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠇⢸⡇⠀⠀⠀⠀⠀⠀
+      ⠀⠈⠘⣿⣄⠘⢷⣄⣀⠉⠙⠛⠒⠲⠶⣤⣤⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⠃⣠⡟⠁⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠈⠙⠷⣄⣈⠉⠙⠳⠶⢤⣄⣀⡀⠀⠀⠉⠉⠉⠛⠛⠳⠶⠶⠶⠶⠶⠶⠤⢤⣤⣤⣤⣤⣤⣤⡤⠶⠾⠋⣠⣾⡋⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠙⠛⢦⣄⡀⠀⠈⠉⠙⠛⠛⠛⠛⠛⠛⠶⢦⣤⣤⣤⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣤⠾⠋⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠳⢶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠀⠀⣰⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠶⠦⠤⠤⢤⣄⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣠⣤⣄⣀⣀⣠⡤⠞⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⣉⣭⣉⠁⠀⣠⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡶⠛⠉⠉⠙⢷⣴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡴⠛⠁⠀⠀⠀⠀⠀⠀⠹⠦⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⠒⠳⣦⠾⠛⢷⡄⠀⠀⣠⡴⢶⣤⣄⠀⣠⡌⠙⠷⣄⡀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣄⠀⠀⠹⣦⣠⣾⣃⡴⠟⢁⡼⢋⣴⣯⠞⠋⠀⠀⠀⠈⠻⣆⠀⠀⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣦⡀⠀⠈⠉⢿⠁⢠⡼⣋⡴⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠙⢷⡄⠀⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢷⡄⠀⠀⢸⣶⢋⣼⠋⠀⠀⠀⠀⣀⡴⠟⠀⠀⠀⠀⠀⠀⢻⣄⠀⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠙⠿⣧⡀⠀⠀⠀⣴⠏⠀⠀⠀⢀⣴⠆⠀⢀⠀⠻⣆⠀
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣇⠀⠀⠀⠀⠀⠈⠻⣦⣤⣼⠃⠀⠀⢀⣠⠞⠁⠀⣠⡾⠀⠀⠻⡆
+      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠟⠃⠹⠗⠀⠀⠀⠀⠀⠀⠀⠀⠙⠓⠀⠀⠾⠃⠀⠀⠸⠋⠀⠀⠀⠀⠿</pre>
+      <p>지겹도록 쓰고있는 아스키아트는 &lt;pre&gt; 안에서 작동한다.</p>
+      <p>&lt;pre&gt; 요소 내의 텍스트는 시스템에서 미리 지정된 고정폭 글꼴(fixed-width font)을 사용하여 표현되며, 텍스트에 사용된 여백과 줄바꿈이 모두 그대로 브라우저 화면에 나타난다.</p>
+  </div>
+
+  <div id="description-q" style="display: none;">
+    &lt;q&gt;태그를 이용해 짧은 인용문을 보여줄 수 있다<div class=""></div><br><q>인터넷에서 읽은 모든 것에 그저 어록과 인물의 사진이 함께 포함되어 있다고 해서 믿지 마라. -에이브러햄 링컨</q>
+  </div>
+
+  <div id="description-r" style="display: none;">
+    <p id="random-text"></p>
+    <p id="original-text"></p>
+  </div>
+
+  <div id="description-s" style="display: none;">
+    &lt;s&gt; 태그를 이용해 했던 말을 취소할 수 있다.
+    <s>사실 했던 말은 취소할 수 없고 주워담기란 힘든 법이다...</s>
+  </div>
+
+  <div id="description-t" style="display: none;">
+    <table>
+      <tr>
+        <th scope="col">table</td>
+        <th scope="col">태그를</td>
+        <th scope="col">이용해</td>
+        <th scope="col">표를</td>
+        <th scope="col">만들수</td>
+        <th scope="col">있다</td>  
+      </tr>
+      <tr>
+        <td>인라인</td>
+        <td>태그라</td>
+        <td>css가</td>
+        <td>잘안먹</td>
+        <td>네요</td>
+      </tr>
+      <tr>
+        <td>웹은</td>
+        <td>웹답게</td>
+        <td>사용합</td>
+        <td>시다여</td>
+        <td>러분들</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="description-u" style="display: none;">
+    <a href="http://vd.design.ac.kr/" target="_blank">12월 5일 시디 과제전 많관부^^..</a>
+    <br>
+    url을 가져오려면 href를 이용합니다.
+</div>
+
+<div id="description-v" style="visibility: hidden; display: flex; justify-content: flex-end;">
+  <p>v가 눌릴때마다 화면 어딘가에서 절규가 나타납니다..visibility로는 이런걸 할 수 있습니다.</p>
+  <p id="toggle-text">아종강하고싶다!!!!!!!!!!!</p>
+</div>
+
+<div id="description-w" style="display: none;">
+  아무일도일어나지않았답니다!!
+</div>
+
+<div id="description-x" style="display: none;">
+  <p>마우스 X 좌표: <span id="x-coordinate">0</span></p>
+</div>
+
+<div id="description-y" style="display: none;">
+  <p>마우스 Y 좌표: <span id="y-coordinate">0</span></p>
+</div>
+
+<div id="description-z" style="display: none;">
+  <p>모든 것은 ZERO로...안녕...</p>
+</div>
+  
+    <pre id="ascii-art"></pre>
+
+    
+    <script src="asset/script.js"></script>
+  </body>
+</html>
