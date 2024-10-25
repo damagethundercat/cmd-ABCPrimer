@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "University of Seoul (R) Visual Design Department\n",
     "서울시립대학교 시각디자인 전공\n\n",
     "Experimental Typography Project: ABCPrimer\n",
-    "v1.0.3-alpha\n\n",
+    "v1.0.4-alpha\n\n",
     "Initializing Typographic System",
     "Loading Creative Assets",
     "\n시작하려면 아무 알파벳이나 입력하십시오. Press any letters to start\n",
@@ -235,33 +235,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
-
     let currentStream = null; // 현재 비디오 스트림 추적
 
     function startAsciiCamera() {
-      const video = document.getElementById('video');
-      const asciiArt = document.getElementById('ascii-art');
+      const dosContent = document.getElementById('dos-content');
     
-      // 비디오 요소 확인
-      if (!video) {
-        console.error("비디오 요소를 찾을 수 없습니다.");
-        return;
-      }
+      // 기존 video와 canvas 요소 제거
+      removeExistingElements();
+    
+      // 숨겨진 video 요소 생성
+      const video = document.createElement('video');
+      video.style.display = 'none'; // 비디오 숨기기
+      video.setAttribute('autoplay', '');
+      video.setAttribute('playsinline', ''); // 모바일 브라우저 호환성
+      
+      // 새로운 ascii-art 요소 생성
+      const asciiArt = document.createElement('pre');
+      asciiArt.id = 'ascii-art';
+    
+      dosContent.appendChild(video);
+      dosContent.appendChild(asciiArt);
     
       // 비디오 스트림 요청
       navigator.mediaDevices.getUserMedia({ video: true })
         .then((stream) => {
           currentStream = stream; // 스트림 저장
           video.srcObject = stream;
-          video.play();
           renderAscii(video, asciiArt); // 아스키 렌더링 시작
         })
         .catch((error) => {
           console.error("웹캠 접근 실패:", error);
         });
+    }
+    
+    // 기존 요소 제거 함수
+    function removeExistingElements() {
+      const video = document.querySelector('video');
+      const asciiArt = document.getElementById('ascii-art');
+      
+      if (video) video.remove(); // 기존 비디오 제거
+      if (asciiArt) asciiArt.remove(); // 기존 아스키 아트 제거
+    
+      // 기존 스트림이 있으면 정지
+      if (currentStream) {
+        currentStream.getTracks().forEach(track => track.stop());
+        currentStream = null;
+      }
     }
     
     // 아스키 렌더링 함수
@@ -293,14 +312,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     
         asciiArtElement.textContent = ascii;
-        if (autoScrollEnabled) {
-          scrollToBottom();
-        }
-        requestAnimationFrame(drawAsciiFrame);
+        requestAnimationFrame(drawAsciiFrame); // 다음 프레임 요청
       }
+      
       scrollToBottom();
       drawAsciiFrame(); // 렌더링 시작
     }
+    
+
 
 function logKeyPress(input) {
   const logContainer = document.getElementById('log-container');
